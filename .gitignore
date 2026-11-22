@@ -1,0 +1,14 @@
+# Gerados pelo notebook a cada execucao (fonte: as celulas que os escrevem)
+pinn_comum.py
+ddp_pinn.py
+pinn_xpinn.py
+tarefa_pinn.py
+
+# Testes de lancamento e de determinismo: reescritos a cada execucao
+*epocas_adam20_*.json
+*_det1.json
+*_det2.json
+
+*.json.log
+__pycache__/
+.ipynb_checkpoints/
