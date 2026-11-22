@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "parallel-pinns-elliptic-pdes"
+dynamic = ["version"]
+description = "PINN monolitica, DDP e XPINN para EDPs elipticas 2D (Laplace e Poisson): codigo do TCC."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Matheus Mondaini" }]
+# Versoes com que os numeros do TCC foram gerados (ver README, "Plataforma")
+dependencies = [
+    "torch>=2.13",
+    "numpy>=2.4",
+    "scipy>=1.16",
+    "psutil>=7.2",
+]
+
+[project.optional-dependencies]
+notebook = ["matplotlib>=3.10", "jupyter", "nbclient>=0.11"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+pinn-train-parallel = "parallel_pinns.cli.train_parallel:main"
+pinn-run-task = "parallel_pinns.cli.run_task:main"
+
+[tool.hatch.version]
+path = "src/parallel_pinns/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/parallel_pinns"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-m 'not lento'"
+markers = ["lento: regressao com o orcamento completo (minutos por caso); rodar com `pytest -m lento`"]
+filterwarnings = ["ignore::UserWarning"]
