@@ -1,4 +1,4 @@
-# Gerados pelo notebook a cada execucao (fonte: as celulas que os escrevem)
+# Gerados pelo notebook exploratorio a cada execucao (fonte: as celulas que os escrevem)
 pinn_comum.py
 ddp_pinn.py
 pinn_xpinn.py
@@ -10,5 +10,11 @@ tarefa_pinn.py
 *_det2.json
 
 *.json.log
+*.log
 __pycache__/
 .ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
