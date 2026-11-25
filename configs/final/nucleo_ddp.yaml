@@ -1,0 +1,18 @@
+# Nucleo (documento de definicao, secao 13): monolitica sequencial (p = 1, a referencia) e DDP p = 4, ambos em CPU
+# (gloo, 1 thread por processo). L0, P0, P1 e P2(n), n em {5, 7, 11, 13}, 10 sementes, contorno fraco,
+# orcamento fixo de 5000 iteracoes. A monolitica p = 1 e a referencia de todas as comparacoes de acuracia.
+nome: final_nucleo_ddp
+pasta: final
+tipo: ddp
+base: {sem_plato: true}
+grade:
+  p: [1, 4]
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+variantes:
+  - {problema: L0}
+  - {problema: P0}
+  - {problema: P1}
+  - {problema: P2, n: 5}
+  - {problema: P2, n: 7}
+  - {problema: P2, n: 11}
+  - {problema: P2, n: 13}

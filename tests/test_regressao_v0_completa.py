@@ -18,7 +18,7 @@ pytestmark = pytest.mark.lento
 def test_ddp_P1_semente0(tmp_path, resultado_exploratorio, p):
     ref = resultado_exploratorio(nome_resultado("P1", p, 0, sem_plato=True))
     r = rodar_ddp("P1", p=p, semente=0, sem_plato=True, pasta=str(tmp_path), reaproveitar=False)
-    assert r["metricas"] == ref["metricas"]
+    assert {k: r["metricas"][k] for k in ref["metricas"]} == ref["metricas"]   # + E_bal, J_u, J_n (novas)
     assert r["hist"]["loss"] == ref["hist"]["loss"]
 
 
@@ -29,5 +29,5 @@ def test_ddp_P1_semente0(tmp_path, resultado_exploratorio, p):
 def test_tarefa(tmp_path, resultado_exploratorio, cfg):
     ref = resultado_exploratorio(arquivo_tarefa(dict(PADRAO_TAREFA, **cfg)))
     (r,) = rodar_fila([cfg], nucleos_cpu=(0,), reaproveitar=False, pasta=str(tmp_path))
-    assert r["metricas"] == ref["metricas"]
+    assert {k: r["metricas"][k] for k in ref["metricas"]} == ref["metricas"]   # + E_bal, J_u, J_n (novas)
     assert r["it_final"] == ref["it_final"] == 5000

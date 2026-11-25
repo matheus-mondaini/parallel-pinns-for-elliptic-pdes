@@ -1,0 +1,17 @@
+# Nucleo: XPINN iso-parametro M = 2 e M = 4 (mesma capacidade total da monolitica), contorno fraco, com o termo de
+# fluxo na interface e lam_I = 0,03. Em CPU, 1 thread: o mesmo dispositivo da monolitica de referencia.
+nome: final_nucleo_xpinn
+pasta: final
+tipo: tarefas
+base: {lam_i: 0.03, dispositivo: cpu, sem_plato: true}
+grade:
+  M: [2, 4]
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+variantes:
+  - {problema: L0}
+  - {problema: P0}
+  - {problema: P1}
+  - {problema: P2, n: 5}
+  - {problema: P2, n: 7}
+  - {problema: P2, n: 11}
+  - {problema: P2, n: 13}

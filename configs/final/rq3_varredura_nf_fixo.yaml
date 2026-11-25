@@ -1,0 +1,10 @@
+# Controle da varredura: N_f = 2000 fixo em n = 21 e 31 (subamostragem), 3 sementes, na GPU.
+nome: final_rq3_varredura_nf_fixo
+pasta: final
+tipo: tarefas
+base: {problema: P2, dispositivo: cuda, sem_plato: true}
+grade:
+  semente: [0, 1, 2]
+variantes:
+  - {n: 21, N_aval: 87}
+  - {n: 31, N_aval: 127}

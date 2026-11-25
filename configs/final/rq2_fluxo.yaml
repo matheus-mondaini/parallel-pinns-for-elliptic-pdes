@@ -1,0 +1,9 @@
+# RQ2, interface do XPINN: com e sem o termo de continuidade do fluxo (J_u, J_n e E_bal), P1, M = 2 e M = 4.
+nome: final_rq2_fluxo
+pasta: final
+tipo: tarefas
+base: {problema: P1, lam_i: 0.03, dispositivo: cpu, sem_plato: true}
+grade:
+  M: [2, 4]
+  fluxo: [true, false]
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

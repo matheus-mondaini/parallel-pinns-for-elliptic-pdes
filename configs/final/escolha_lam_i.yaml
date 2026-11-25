@@ -1,0 +1,8 @@
+# Escolha de lam_I (fixada antes; criterio: menor E_L2 geometrico), XPINN M = 4 em P2(11), sementes separadas 10 a 12.
+nome: final_escolha_lam_i
+pasta: final
+tipo: tarefas
+base: {problema: P2, n: 11, M: 4, dispositivo: cpu, sem_plato: true}
+grade:
+  lam_i: [0.03, 0.1, 0.3, 1.0]
+  semente: [10, 11, 12]

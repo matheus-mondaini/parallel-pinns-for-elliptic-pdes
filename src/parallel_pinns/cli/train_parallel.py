@@ -12,7 +12,7 @@ import warnings
 import torch
 import torch.distributed as dist
 
-from ..analysis.metrics import avaliar
+from ..analysis.metrics import metricas_finais
 from ..physics.pdes import criar_problema
 from ..training import treinar_pinn, treinar_xpinn
 
@@ -55,8 +55,7 @@ def main(argv=None):
         rede, hist, tempo = treinar_pinn(prob, **kw)
 
     if rank == 0:
-        m = avaliar(rede, prob)
-        metricas = {k: float(v) for k, v in m.items() if k in ("L2", "H1", "PDE", "E_n", "E_1", "E_esp")}
+        metricas = metricas_finais(rede, prob)
         with open(args.saida, "w") as arquivo:
             json.dump({"processos": dist.get_world_size() if distribuido else 1, "tempo": tempo,
                        "metricas": metricas, "hist": hist}, arquivo)

@@ -1,0 +1,15 @@
+# RQ3, limiar da monolitica: P2(n), n em {11, 15, 21, 25, 31}, ~8 pontos por comprimento de onda (N_f proporcional
+# a n^2) e grade de avaliacao com 4n + 3 pontos por direcao, 10 sementes, orcamento fixo, na GPU.
+# Controle de subamostragem: N_f = 2000 fixo em n = 21 e 31 (3 sementes, indicacao).
+nome: final_rq3_varredura
+pasta: final
+tipo: tarefas
+base: {problema: P2, dispositivo: cuda, sem_plato: true}
+grade:
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+variantes:
+  - {n: 11}
+  - {n: 15, N_f: 3719, N_b: 544}
+  - {n: 21, N_f: 7289, N_b: 764, N_aval: 87}
+  - {n: 25, N_f: 10331, N_b: 908, N_aval: 103}
+  - {n: 31, N_f: 15884, N_b: 1128, N_aval: 127}

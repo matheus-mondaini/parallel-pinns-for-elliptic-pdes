@@ -61,6 +61,29 @@ def balanco_global(modelo, prob, Nq=64):
     return abs(integral_f.item() + fluxo_rede) / fluxo_exato_abs
 
 
+CHAVES_METRICAS = ("L2", "H1", "PDE", "E_n", "E_1", "E_esp")
+
+
+def metricas_finais(rede, prob, N_aval=63, invariantes=True):
+    # Metricas gravadas no .json de cada execucao: acuracia, espectrais (P2) e, com invariantes=True, as
+    # verificacoes de consistencia fisica: balanco global (todas) e saltos na interface (XPINN). Calculadas depois
+    # do treino, nao mudam nada nele.
+    from .interface import saltos_interface
+
+    m = avaliar(rede, prob, N_aval)
+    metricas = {k: float(v) for k, v in m.items() if k in CHAVES_METRICAS}
+    if invariantes:
+        metricas["E_bal"] = float(balanco_global(rede, prob))
+        if hasattr(rede, "sub_redes"):
+            metricas["J_u"], metricas["J_n"] = (float(v) for v in saltos_interface(rede, prob))
+    return metricas
+
+
+def historico_avaliacoes(hist):
+    # Parte do historico usada nas figuras de convergencia e no time-to-solution
+    return {k: hist[k] for k in ("aval_it", "aval_tempo", "L2", "E_n", "E_1") if k in hist}
+
+
 def time_to_solution(hist, chave, limiar):
     # Tempo de relogio a partir do qual hist[chave] fica abaixo do limiar ATE O FIM do treino.
     # (So "a primeira vez abaixo" nao serve: E_n pode cruzar o limiar de passagem
