@@ -13,6 +13,14 @@ Formato baseado em [Keep a Changelog 1.1.0](https://keepachangelog.com/pt-BR/1.1
   - **regressão contra a tag exploratória**, bit a bit;
   - versão completa da regressão, com 5000 iterações (`pytest -m lento`).
 - `pyproject.toml` (PEP 621), `CHANGELOG.md` e READMEs.
+- Experimentos declarativos em `configs/`, um `.yaml` por experimento. Os seis arquivos descrevem os experimentos da versão exploratória.
+- `python -m parallel_pinns.cli.run_experiment`, que grava em `results/<experimento>/` um `.json` por execução e um `manifesto.json` (`parallel_pinns.tracking`). O manifesto registra a configuração, o commit, as versões e a plataforma.
+- `notebooks/01_resultados.ipynb`, que só lê os resultados e gera as tabelas e as figuras.
+- `uv.lock`, com as versões exatas dos resultados: PyTorch 2.13 com CUDA 13.2, NumPy 2.4.6 e SciPy 1.16.3.
+- README: tabela das diferenças em relação à proposta do TCC.
+
+### Corrigido
+- `README.md` estava em UTF-16. Agora está em UTF-8, o que permite construir o pacote.
 
 ### Mudado
 - O notebook e os resultados exploratórios foram para `notebooks/exploratorio/`, sem alteração de conteúdo.

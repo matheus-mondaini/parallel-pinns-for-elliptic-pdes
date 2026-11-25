@@ -1,0 +1,6 @@
+# Verificacao complementar (secao 13): a monolitica de n = 15 tambem em CPU, mesmas sementes e pontos.
+nome: verificacao_cpu
+tipo: tarefas
+base: {problema: P2, n: 15, N_f: 3719, N_b: 544, dispositivo: cpu, sem_plato: true}
+grade:
+  semente: [20, 21, 22, 23, 24, 25, 26, 27, 28, 29]

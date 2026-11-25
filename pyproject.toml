@@ -15,6 +15,7 @@ dependencies = [
     "numpy>=2.4",
     "scipy>=1.16",
     "psutil>=7.2",
+    "pyyaml>=6.0",
 ]
 
 [project.optional-dependencies]
@@ -24,6 +25,22 @@ dev = ["pytest>=8"]
 [project.scripts]
 pinn-train-parallel = "parallel_pinns.cli.train_parallel:main"
 pinn-run-task = "parallel_pinns.cli.run_task:main"
+pinn-run-experiment = "parallel_pinns.cli.run_experiment:main"
+
+# Ambiente travado (uv.lock): PyTorch com CUDA 13.2, o mesmo dos resultados, em Windows e Linux
+[tool.uv]
+environments = ["sys_platform == 'win32'", "sys_platform == 'linux'"]
+# Versoes exatas com que os resultados foram gerados (so restringem o lock; o pacote aceita as faixas acima)
+constraint-dependencies = ["torch==2.13.0", "numpy==2.4.6", "scipy==1.16.3", "psutil==7.2.2", "pyyaml==6.0.3",
+                           "matplotlib==3.10.9", "nbclient==0.11.0"]
+
+[[tool.uv.index]]
+name = "pytorch-cu132"
+url = "https://download.pytorch.org/whl/cu132"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu132" }]
 
 [tool.hatch.version]
 path = "src/parallel_pinns/__init__.py"

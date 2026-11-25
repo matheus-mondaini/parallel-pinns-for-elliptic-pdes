@@ -1,0 +1,8 @@
+# DDP x sequencial (secao 10 do notebook exploratorio): TOST pareado com 20 sementes, orcamento fixo.
+# p = 1 e a referencia sequencial (treinar_pinn sem DDP), em CPU com 1 thread, como os ranks do DDP.
+nome: ddp_tost
+tipo: ddp
+base: {problema: P1, sem_plato: true}          # 3000 Adam + 100 x 20 L-BFGS = 5000 iteracoes
+grade:
+  p: [1, 2, 4]
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
