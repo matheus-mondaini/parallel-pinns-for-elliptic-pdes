@@ -1,0 +1,8 @@
+# Ajuste da monolitica (secao 13, simetria com o lam_I do XPINN): 4 candidatos de lam_BC em P2(11),
+# sementes 10 a 12, orcamento fixo. Criterio fixado antes: menor media geometrica de E_L2.
+nome: escolha_lam_bc
+tipo: tarefas
+base: {problema: P2, n: 11, dispositivo: cuda, sem_plato: true}
+grade:
+  lam_bc: [0.1, 0.3, 1.0, 3.0]
+  semente: [10, 11, 12]

@@ -1,0 +1,7 @@
+# Teste da ordem das somas (secao 13): sequencial em float64, mesmos pontos e pesos iniciais do float32.
+# O sequencial em float32 e o DDP sao os de ddp_tost.yaml.
+nome: ordem_somas
+tipo: tarefas
+base: {problema: P1, float64: true, dispositivo: cpu, sem_plato: true}
+grade:
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]

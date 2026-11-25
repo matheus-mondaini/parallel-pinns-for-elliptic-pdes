@@ -1,0 +1,7 @@
+# XPINN distribuido por replicacao de parametros (secao 11): M = 2, 4 processos contra o sequencial.
+nome: xpinn_distribuido
+tipo: ddp
+base: {problema: P1, M: 2, sem_plato: true}
+grade:
+  p: [1, 4]
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
