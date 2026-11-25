@@ -47,11 +47,13 @@ src/parallel_pinns/
   tracking/     experimentos declarativos: YAML -> execuções -> .json + manifesto de proveniência
   cli/          python -m parallel_pinns.cli.run_experiment | train_parallel | run_task
 configs/        um .yaml por experimento (ver configs/README.md)
-results/        <experimento>/*.json + manifesto.json (gerado pela execução final)
+results/final/  os 570 .json da execução final + manifesto_<experimento>.json
 tests/          unidade, estatística sobre os resultados exploratórios, configs e regressão contra a tag
 notebooks/
-  01_resultados.ipynb       só lê os resultados e gera as tabelas e figuras
-  exploratorio/             o notebook da tag e os seus resultados
+  01_resultados.ipynb          refaz as tabelas da versão exploratória a partir dos seus .json
+  02_resultados_finais.ipynb   tabelas e figuras do TCC 2, só lendo results/final/
+  figuras/                     as figuras do 02 em PDF, para o LaTeX
+  exploratorio/                o notebook da tag e os seus resultados
 pyproject.toml, uv.lock     dependências; o lock fixa as versões exatas dos resultados
 ```
 
@@ -117,9 +119,9 @@ Os resultados exploratórios e a referência da regressão vêm de:
 
 O DDP roda em CPU, com `gloo`. Igualdade bit a bit só é garantida na mesma plataforma e com as mesmas versões.
 
-## Próximos passos
+## Execução final
 
-- **Execução final:** `python -m parallel_pinns.cli.run_all "configs/final/*.yaml"` roda as 570 execuções da [`configs/final/`](configs/README.md) e grava em `results/final/`. Depois, as tabelas e figuras do TCC saem de um notebook que só lê esses resultados. No texto, citar o commit registrado nos manifestos e a tag exploratória.
+`python -m parallel_pinns.cli.run_all "configs/final/*.yaml"` rodou as 570 execuções da [`configs/final/`](configs/README.md) em 25/11/2026 (01:29 às 19:42), no commit `540f1a4`, registrado em cada manifesto. Os resultados estão em `results/final/`, e as tabelas e figuras do TCC 2 saem de [`notebooks/02_resultados_finais.ipynb`](notebooks/02_resultados_finais.ipynb), que não treina nada. No texto, citar esse commit e a tag exploratória.
 
 ## Diferenças em relação à proposta do TCC (§3.2, §3.3 e §3.6)
 

@@ -1,0 +1,81 @@
+{
+ "config": {
+  "nome": "final_sens_contorno",
+  "pasta": "final",
+  "tipo": "tarefas",
+  "base": {
+   "problema": "P2",
+   "n": 11,
+   "dispositivo": "cuda",
+   "sem_plato": true
+  },
+  "grade": {
+   "contorno": [
+    "fraco",
+    "exato",
+    "transfinito"
+   ],
+   "semente": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  }
+ },
+ "commit": "540f1a4b3c5fd3b71b41947001489e9ed9330266",
+ "alteracoes_nao_commitadas": false,
+ "versoes": {
+  "parallel_pinns": "0.2.0.dev0",
+  "python": "3.11.5",
+  "torch": "2.13.0+cu132",
+  "numpy": "2.4.6",
+  "scipy": "1.16.3"
+ },
+ "plataforma": {
+  "sistema": "Windows-10-10.0.19045-SP0",
+  "processador": "Intel64 Family 6 Model 63 Stepping 2, GenuineIntel",
+  "nucleos_logicos": 12,
+  "gpu": "NVIDIA GeForce GTX 1660"
+ },
+ "inicio": "2026-11-25T02:08:26-03:00",
+ "fim": "2026-11-25T19:42:59-03:00",
+ "arquivos": [
+  "tarefa_dispositivocuda_n11_problemaP2_semente0.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente1.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente2.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente3.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente4.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente5.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente6.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente7.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente8.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente9.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente0.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente1.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente2.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente3.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente4.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente5.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente6.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente7.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente8.json",
+  "tarefa_contornoexato_dispositivocuda_n11_problemaP2_semente9.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente0.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente1.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente2.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente3.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente4.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente5.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente6.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente7.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente8.json",
+  "tarefa_contornotransfinito_dispositivocuda_n11_problemaP2_semente9.json"
+ ]
+}

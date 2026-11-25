@@ -22,6 +22,8 @@ Formato baseado em [Keep a Changelog 1.1.0](https://keepachangelog.com/pt-BR/1.1
 - Execução final declarada em `configs/final/`: 14 experimentos e 570 execuções sem repetição, cada um ligado a uma hipótese, uma pergunta de pesquisa ou uma verificação do TCC 2. `python -m parallel_pinns.cli.run_all` roda tudo de uma vez: primeiro as medições de tempo, sozinhas; depois a acurácia, em paralelo. As execuções são compartilhadas entre experimentos.
 - Tarefas com as opções `contorno`, `fluxo` e `N_aval`. Os `.json` passam a registrar o balanço global ($E_{bal}$), os saltos na interface ($J_u$, $J_n$) e o histórico das avaliações.
 - Medições de tempo declarativas: `exclusivo`, `afinidade` e `carga`, esta para o efeito do turbo.
+- Resultados da execução final em `results/final/`: 570 `.json` e 14 manifestos, todos do commit `540f1a4`.
+- `notebooks/02_resultados_finais.ipynb`, com as tabelas e figuras do TCC 2 por capítulo (verificação, RQ1, núcleo, H1, RQ3, H2 e RQ2), e as figuras em PDF em `notebooks/figuras/`.
 
 ### Corrigido
 - `README.md` estava em UTF-16. Agora está em UTF-8, o que permite construir o pacote.

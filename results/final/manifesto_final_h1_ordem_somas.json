@@ -1,0 +1,76 @@
+{
+ "config": {
+  "nome": "final_h1_ordem_somas",
+  "pasta": "final",
+  "tipo": "tarefas",
+  "base": {
+   "problema": "P1",
+   "float64": true,
+   "dispositivo": "cpu",
+   "sem_plato": true
+  },
+  "grade": {
+   "semente": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ]
+  }
+ },
+ "commit": "540f1a4b3c5fd3b71b41947001489e9ed9330266",
+ "alteracoes_nao_commitadas": false,
+ "versoes": {
+  "parallel_pinns": "0.2.0.dev0",
+  "python": "3.11.5",
+  "torch": "2.13.0+cu132",
+  "numpy": "2.4.6",
+  "scipy": "1.16.3"
+ },
+ "plataforma": {
+  "sistema": "Windows-10-10.0.19045-SP0",
+  "processador": "Intel64 Family 6 Model 63 Stepping 2, GenuineIntel",
+  "nucleos_logicos": 12,
+  "gpu": "NVIDIA GeForce GTX 1660"
+ },
+ "inicio": "2026-11-25T02:08:25-03:00",
+ "fim": "2026-11-25T19:42:59-03:00",
+ "arquivos": [
+  "tarefa_dispositivocpu_float64True_problemaP1_semente0.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente1.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente2.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente3.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente4.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente5.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente6.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente7.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente8.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente9.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente10.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente11.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente12.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente13.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente14.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente15.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente16.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente17.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente18.json",
+  "tarefa_dispositivocpu_float64True_problemaP1_semente19.json"
+ ]
+}
