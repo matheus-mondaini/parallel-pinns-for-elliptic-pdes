@@ -68,7 +68,7 @@ pytest -m lento                    # regressão com 5000 iterações (dezenas de
 Um experimento é um arquivo em `configs/`. Para rodá-lo:
 
 ```
-python -m parallel_pinns.cli.run_experiment configs/h2_confirmatorio.yaml
+python -m parallel_pinns.cli.run_experiment configs/exploratorio/h2_confirmatorio.yaml
 ```
 
 O comando grava um `.json` por execução em `results/h2_confirmatorio/` e um `manifesto.json` com o commit, as versões e a plataforma. As tabelas e figuras saem de [`notebooks/01_resultados.ipynb`](notebooks/01_resultados.ipynb), que não treina nada.

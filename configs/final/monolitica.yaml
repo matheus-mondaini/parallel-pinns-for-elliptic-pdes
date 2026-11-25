@@ -1,0 +1,17 @@
+# Execucao final, nucleo (documento de definicao, secao 13): PINN monolitica 4 x 64, contorno fraco.
+# L0, P0, P1 e P2(n) com n em {5, 7, 11, 13}, 10 sementes (TCC, secao 3.4), na GPU.
+# Orcamento fixo de 5000 iteracoes sem plato (3000 Adam + 100 x 20 L-BFGS), como no teste confirmatorio:
+# o criterio de plato parava execucoes na solucao trivial (notebook exploratorio, secao 13).
+nome: final_monolitica
+tipo: tarefas
+base: {dispositivo: cuda, sem_plato: true}
+grade:
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+variantes:
+  - {problema: L0}
+  - {problema: P0}
+  - {problema: P1}
+  - {problema: P2, n: 5}
+  - {problema: P2, n: 7}
+  - {problema: P2, n: 11}
+  - {problema: P2, n: 13}

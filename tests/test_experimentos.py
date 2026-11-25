@@ -8,7 +8,7 @@ from parallel_pinns.cli.run_experiment import main as run_experiment
 from parallel_pinns.tracking import arquivo_resultado, carregar_config, carregar_resultados, expandir
 
 RAIZ = Path(__file__).resolve().parents[1]
-CONFIGS = sorted((RAIZ / "configs").glob("*.yaml"))
+CONFIGS = sorted((RAIZ / "configs" / "exploratorio").glob("*.yaml"))
 ESPERADO = {"ddp_tost": 60, "xpinn_distribuido": 20, "escolha_lam_bc": 12, "h2_confirmatorio": 40,
             "verificacao_cpu": 10, "ordem_somas": 20}
 
@@ -24,6 +24,19 @@ def test_config_descreve_os_resultados_exploratorios(caminho):
 
 def test_todas_as_configs_estao_cobertas():
     assert {c.stem for c in CONFIGS} == set(ESPERADO)
+
+
+@pytest.mark.parametrize("arquivo,nome,total", [("monolitica", "final_monolitica", 70), ("xpinn", "final_xpinn", 140),
+                                                 ("ddp", "final_ddp", 140)])
+def test_grade_final(arquivo, nome, total):
+    # Nucleo do documento de definicao: L0, P0, P1 e P2(n), n em {5, 7, 11, 13}, 10 sementes, orcamento fixo
+    cfg = carregar_config(RAIZ / "configs" / "final" / f"{arquivo}.yaml")
+    execucoes = expandir(cfg)
+    assert cfg["nome"] == nome and len(execucoes) == total
+    assert len({arquivo_resultado(cfg["tipo"], t) for t in execucoes}) == total      # um .json por execucao
+    assert all(t["sem_plato"] for t in execucoes)
+    assert {(t["problema"], t.get("n")) for t in execucoes} == {("L0", None), ("P0", None), ("P1", None), ("P2", 5),
+                                                                 ("P2", 7), ("P2", 11), ("P2", 13)}
 
 
 def test_expansao_com_variantes_e_condicionais():
