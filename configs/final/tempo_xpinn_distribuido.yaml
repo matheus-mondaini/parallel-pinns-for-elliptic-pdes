@@ -1,0 +1,11 @@
+# Tempo do XPINN distribuido por replicacao de parametros (secao 11): cada execucao sozinha, afinidade fixa.
+nome: final_tempo_xpinn_distribuido
+pasta: final
+tipo: ddp
+exclusivo: true
+base: {problema: P1, epocas_adam: 500, passos_lbfgs: 10, sem_plato: true, sem_avaliacao: true,
+       afinidade: true, rotulo: _afin}
+grade:
+  M: [2, 4]
+  N_f: [2000, 8000]
+  p: [1, 2, 4]

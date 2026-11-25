@@ -1,0 +1,14 @@
+# Tempo do DDP (secao 10): cada execucao sozinha, um processo por nucleo fisico (afinidade fixa), 500 Adam + 10 L-BFGS.
+# A referencia p = 1 tambem com os outros 5 nucleos ocupados (carga): efeito do turbo.
+nome: final_tempo_ddp
+pasta: final
+tipo: ddp
+exclusivo: true
+base: {problema: P1, N_b: 480, epocas_adam: 500, passos_lbfgs: 10, sem_plato: true, sem_avaliacao: true,
+       afinidade: true, rotulo: _afin}
+grade:
+  N_f: [2400, 4800, 9600]
+  p: [1, 2, 3, 4, 6]
+variantes:
+  - {}
+  - {p: 1, carga: true, rotulo: _afin_carga}

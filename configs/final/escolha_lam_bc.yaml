@@ -1,0 +1,8 @@
+# Escolha de lam_BC da monolitica (simetria com o lam_I), P2(11), sementes 10 a 12, em CPU como a referencia.
+nome: final_escolha_lam_bc
+pasta: final
+tipo: tarefas
+base: {problema: P2, n: 11, dispositivo: cpu, sem_plato: true}
+grade:
+  lam_bc: [0.1, 0.3, 1.0, 3.0]
+  semente: [10, 11, 12]

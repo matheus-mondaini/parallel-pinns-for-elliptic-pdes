@@ -19,6 +19,10 @@ Formato baseado em [Keep a Changelog 1.1.0](https://keepachangelog.com/pt-BR/1.1
 - `uv.lock`, com as versões exatas dos resultados: PyTorch 2.13 com CUDA 13.2, NumPy 2.4.6 e SciPy 1.16.3.
 - README: tabela das diferenças em relação à proposta do TCC.
 
+- Execução final declarada em `configs/final/`: 14 experimentos e 570 execuções sem repetição, cada um ligado a uma hipótese, uma pergunta de pesquisa ou uma verificação do TCC 2. `python -m parallel_pinns.cli.run_all` roda tudo de uma vez: primeiro as medições de tempo, sozinhas; depois a acurácia, em paralelo. As execuções são compartilhadas entre experimentos.
+- Tarefas com as opções `contorno`, `fluxo` e `N_aval`. Os `.json` passam a registrar o balanço global ($E_{bal}$), os saltos na interface ($J_u$, $J_n$) e o histórico das avaliações.
+- Medições de tempo declarativas: `exclusivo`, `afinidade` e `carga`, esta para o efeito do turbo.
+
 ### Corrigido
 - `README.md` estava em UTF-16. Agora está em UTF-8, o que permite construir o pacote.
 

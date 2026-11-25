@@ -42,7 +42,7 @@ def test_treino_em_processo_igual_a_v0(casos_src, nome):
 def test_ddp_e_xpinn_distribuido_iguais_a_v0(tmp_path, nome, opcoes, p):
     r = rodar_ddp("P1", p=p, semente=0, pasta=str(tmp_path), reaproveitar=False, **CURTO, **opcoes)
     ref = REFERENCIA["ddp"][nome]
-    assert r["metricas"] == ref["metricas"]
+    assert {k: r["metricas"][k] for k in ref["metricas"]} == ref["metricas"]   # + E_bal, J_u, J_n (novas)
     assert r["hist"]["loss"] == ref["loss"]
     assert r["hist"]["it_final"] == ref["it_final"]
 
@@ -54,7 +54,7 @@ def test_ddp_e_xpinn_distribuido_iguais_a_v0(tmp_path, nome, opcoes, p):
 def test_tarefa_isolada_igual_a_v0(tmp_path, nome, cfg):
     (r,) = rodar_fila([dict(cfg, **CURTO)], nucleos_cpu=(0,), reaproveitar=False, pasta=str(tmp_path))
     ref = REFERENCIA["tarefas"][nome]
-    assert r["metricas"] == ref["metricas"]
+    assert {k: r["metricas"][k] for k in ref["metricas"]} == ref["metricas"]   # + E_bal, J_u, J_n (novas)
     assert (r["it_final"], r["dtype"]) == (ref["it_final"], ref["dtype"])
 
 

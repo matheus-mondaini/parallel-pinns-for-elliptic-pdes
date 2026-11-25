@@ -1,0 +1,8 @@
+# H1, XPINN distribuido por replicacao de parametros: M = 2, 4 processos contra o XPINN sequencial, TOST.
+nome: final_h1_xpinn_distribuido
+pasta: final
+tipo: ddp
+base: {problema: P1, M: 2, sem_plato: true}
+grade:
+  p: [1, 4]
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

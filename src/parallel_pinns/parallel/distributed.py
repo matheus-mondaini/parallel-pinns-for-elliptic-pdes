@@ -87,6 +87,24 @@ def rodar_ddp(nome, p=4, semente=0, n=None, **opcoes):
     return concluir_ddp(*iniciar_ddp(nome, p, semente, n, **opcoes))
 
 
+def iniciar_carga(cpus):
+    # Processos que so giram num laco vazio, cada um preso a um processador logico: os nucleos ficam ativos
+    # (frequencia de turbo com todos os nucleos ocupados), sem disputar memoria. Mede o efeito do turbo.
+    procs = []
+    for c in cpus:
+        pr = subprocess.Popen([sys.executable, "-c", "while True: pass"])
+        psutil.Process(pr.pid).cpu_affinity([c % os.cpu_count()])
+        procs.append(pr)
+    time.sleep(2)
+    return procs
+
+
+def parar_carga(procs):
+    for pr in procs:
+        pr.kill()
+        pr.wait()
+
+
 def rodar_ddp_lote(tarefas, nucleos=6):
     # Varias execucoes ao mesmo tempo, sem passar de `nucleos` processos (1 por nucleo fisico).
     # So para ACURACIA: execucoes simultaneas disputam memoria, entao os tempos delas nao entram em contas de speedup.

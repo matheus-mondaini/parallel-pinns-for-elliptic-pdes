@@ -119,7 +119,7 @@ O DDP roda em CPU, com `gloo`. Igualdade bit a bit só é garantida na mesma pla
 
 ## Próximos passos
 
-- **Experimentos da execução final:** criar os arquivos em `configs/`, rodar `run_experiment` e apontar `notebooks/01_resultados.ipynb` para `results/`. No texto, citar o commit registrado em cada `manifesto.json` e a tag exploratória.
+- **Execução final:** `python -m parallel_pinns.cli.run_all "configs/final/*.yaml"` roda as 570 execuções da [`configs/final/`](configs/README.md) e grava em `results/final/`. Depois, as tabelas e figuras do TCC saem de um notebook que só lê esses resultados. No texto, citar o commit registrado nos manifestos e a tag exploratória.
 
 ## Diferenças em relação à proposta do TCC (§3.2, §3.3 e §3.6)
 

@@ -13,7 +13,10 @@ import psutil
 from .distributed import ambiente_filho
 
 PADRAO_TAREFA = dict(problema="P2", n=None, semente=0, N_f=2000, N_b=400, lam_bc=1.0, M=0, lam_i=1.0,
-                     epocas_adam=3000, passos_lbfgs=100, sem_plato=True, float64=False, dispositivo="cpu")
+                     epocas_adam=3000, passos_lbfgs=100, sem_plato=True, float64=False, dispositivo="cpu",
+                     contorno="fraco", fluxo=True, N_aval=None)
+# As tres ultimas chaves vieram depois da versao exploratoria: com o valor padrao, nao entram no nome do arquivo,
+# entao os resultados exploratorios continuam sendo encontrados.
 
 
 def arquivo_tarefa(cfg):
@@ -22,9 +25,10 @@ def arquivo_tarefa(cfg):
     return "tarefa_" + "_".join(partes).replace(".", "p") + ".json"
 
 
-def rodar_fila(tarefas, nucleos_cpu=(2, 4, 6, 8, 10), nucleo_gpu=0, reaproveitar=True, pasta="."):
+def rodar_fila(tarefas, nucleos_cpu=(2, 4, 6, 8, 10), nucleo_gpu=0, reaproveitar=True, pasta=".", nucleos_extra=None):
     # GPU: uma tarefa por vez, presa ao nucleo fisico 0. CPU: uma tarefa por nucleo fisico livre (1 thread cada).
     # reaproveitar: se o .json ja existe, nao roda de novo (retomada depois de uma interrupcao).
+    # nucleos_extra: lista compartilhada; nucleos que outro trabalho liberar no meio do caminho entram na fila.
     cfgs = [dict(PADRAO_TAREFA, **t) for t in tarefas]
     caminho = lambda c: os.path.join(pasta, arquivo_tarefa(c))
     fila = {"cuda": [], "cpu": []}
@@ -34,6 +38,8 @@ def rodar_fila(tarefas, nucleos_cpu=(2, 4, 6, 8, 10), nucleo_gpu=0, reaproveitar
     livres, ativos = {"cuda": [nucleo_gpu], "cpu": list(nucleos_cpu)}, []
     try:
         while any(fila.values()) or ativos:
+            while nucleos_extra:
+                livres["cpu"].append(nucleos_extra.pop())
             for d in ("cuda", "cpu"):
                 while fila[d] and livres[d]:
                     i, nucleo = fila[d].pop(0), livres[d].pop(0)

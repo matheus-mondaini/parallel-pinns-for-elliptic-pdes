@@ -1,0 +1,8 @@
+# H1, acuracia do DDP: TOST pareado com 20 sementes em P1 (margem [0,8; 1,25], Bonferroni), p = 2 e p = 4.
+nome: final_h1_ddp_tost
+pasta: final
+tipo: ddp
+base: {problema: P1, sem_plato: true}
+grade:
+  p: [1, 2, 4]
+  semente: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
