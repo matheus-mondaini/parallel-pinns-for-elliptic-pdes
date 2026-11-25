@@ -1,0 +1,132 @@
+{
+ "config": {
+  "nome": "final_h2_confirmatorio",
+  "pasta": "final",
+  "tipo": "tarefas",
+  "base": {
+   "problema": "P2",
+   "sem_plato": true
+  },
+  "grade": {
+   "n": [
+    13,
+    15
+   ],
+   "semente": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ]
+  },
+  "variantes": [
+   {
+    "dispositivo": "cpu"
+   },
+   {
+    "dispositivo": "cuda"
+   },
+   {
+    "M": 4,
+    "lam_i": 0.03,
+    "dispositivo": "cpu"
+   }
+  ],
+  "condicionais": [
+   {
+    "quando": {
+     "n": 15
+    },
+    "usar": {
+     "N_f": 3719,
+     "N_b": 544
+    }
+   }
+  ]
+ },
+ "commit": "540f1a4b3c5fd3b71b41947001489e9ed9330266",
+ "alteracoes_nao_commitadas": false,
+ "versoes": {
+  "parallel_pinns": "0.2.0.dev0",
+  "python": "3.11.5",
+  "torch": "2.13.0+cu132",
+  "numpy": "2.4.6",
+  "scipy": "1.16.3"
+ },
+ "plataforma": {
+  "sistema": "Windows-10-10.0.19045-SP0",
+  "processador": "Intel64 Family 6 Model 63 Stepping 2, GenuineIntel",
+  "nucleos_logicos": 12,
+  "gpu": "NVIDIA GeForce GTX 1660"
+ },
+ "inicio": "2026-11-25T02:08:25-03:00",
+ "fim": "2026-11-25T19:42:59-03:00",
+ "arquivos": [
+  "tarefa_dispositivocpu_n13_problemaP2_semente20.json",
+  "tarefa_dispositivocpu_n13_problemaP2_semente21.json",
+  "tarefa_dispositivocpu_n13_problemaP2_semente22.json",
+  "tarefa_dispositivocpu_n13_problemaP2_semente23.json",
+  "tarefa_dispositivocpu_n13_problemaP2_semente24.json",
+  "tarefa_dispositivocpu_n13_problemaP2_semente25.json",
+  "tarefa_dispositivocpu_n13_problemaP2_semente26.json",
+  "tarefa_dispositivocpu_n13_problemaP2_semente27.json",
+  "tarefa_dispositivocpu_n13_problemaP2_semente28.json",
+  "tarefa_dispositivocpu_n13_problemaP2_semente29.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente20.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente21.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente22.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente23.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente24.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente25.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente26.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente27.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente28.json",
+  "tarefa_N_b544_N_f3719_dispositivocpu_n15_problemaP2_semente29.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente20.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente21.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente22.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente23.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente24.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente25.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente26.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente27.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente28.json",
+  "tarefa_dispositivocuda_n13_problemaP2_semente29.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente20.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente21.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente22.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente23.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente24.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente25.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente26.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente27.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente28.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente29.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente20.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente21.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente22.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente23.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente24.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente25.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente26.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente27.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente28.json",
+  "tarefa_M4_dispositivocpu_lam_i0p03_n13_problemaP2_semente29.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente20.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente21.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente22.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente23.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente24.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente25.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente26.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente27.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente28.json",
+  "tarefa_M4_N_b544_N_f3719_dispositivocpu_lam_i0p03_n15_problemaP2_semente29.json"
+ ]
+}

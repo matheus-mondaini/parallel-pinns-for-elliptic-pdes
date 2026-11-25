@@ -1,0 +1,77 @@
+{
+ "config": {
+  "nome": "final_tempo_ddp",
+  "pasta": "final",
+  "tipo": "ddp",
+  "exclusivo": true,
+  "base": {
+   "problema": "P1",
+   "N_b": 480,
+   "epocas_adam": 500,
+   "passos_lbfgs": 10,
+   "sem_plato": true,
+   "sem_avaliacao": true,
+   "afinidade": true,
+   "rotulo": "_afin"
+  },
+  "grade": {
+   "N_f": [
+    2400,
+    4800,
+    9600
+   ],
+   "p": [
+    1,
+    2,
+    3,
+    4,
+    6
+   ]
+  },
+  "variantes": [
+   {},
+   {
+    "p": 1,
+    "carga": true,
+    "rotulo": "_afin_carga"
+   }
+  ]
+ },
+ "commit": "540f1a4b3c5fd3b71b41947001489e9ed9330266",
+ "alteracoes_nao_commitadas": false,
+ "versoes": {
+  "parallel_pinns": "0.2.0.dev0",
+  "python": "3.11.5",
+  "torch": "2.13.0+cu132",
+  "numpy": "2.4.6",
+  "scipy": "1.16.3"
+ },
+ "plataforma": {
+  "sistema": "Windows-10-10.0.19045-SP0",
+  "processador": "Intel64 Family 6 Model 63 Stepping 2, GenuineIntel",
+  "nucleos_logicos": 12,
+  "gpu": "NVIDIA GeForce GTX 1660"
+ },
+ "inicio": "2026-11-25T01:29:34-03:00",
+ "fim": "2026-11-25T01:58:32-03:00",
+ "arquivos": [
+  "ddp_P1_p1_s0_N_b480_N_f2400_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p2_s0_N_b480_N_f2400_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p3_s0_N_b480_N_f2400_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p4_s0_N_b480_N_f2400_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p6_s0_N_b480_N_f2400_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p1_s0_N_b480_N_f4800_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p2_s0_N_b480_N_f4800_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p3_s0_N_b480_N_f4800_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p4_s0_N_b480_N_f4800_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p6_s0_N_b480_N_f4800_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p1_s0_N_b480_N_f9600_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p2_s0_N_b480_N_f9600_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p3_s0_N_b480_N_f9600_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p4_s0_N_b480_N_f9600_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p6_s0_N_b480_N_f9600_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin.json",
+  "ddp_P1_p1_s0_N_b480_N_f2400_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin_carga.json",
+  "ddp_P1_p1_s0_N_b480_N_f4800_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin_carga.json",
+  "ddp_P1_p1_s0_N_b480_N_f9600_epocas_adam500_passos_lbfgs10_sem_avaliacao_sem_plato_afin_carga.json"
+ ]
+}

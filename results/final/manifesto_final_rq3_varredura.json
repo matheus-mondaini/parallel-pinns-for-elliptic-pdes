@@ -1,0 +1,123 @@
+{
+ "config": {
+  "nome": "final_rq3_varredura",
+  "pasta": "final",
+  "tipo": "tarefas",
+  "base": {
+   "problema": "P2",
+   "dispositivo": "cuda",
+   "sem_plato": true
+  },
+  "grade": {
+   "semente": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "variantes": [
+   {
+    "n": 11
+   },
+   {
+    "n": 15,
+    "N_f": 3719,
+    "N_b": 544
+   },
+   {
+    "n": 21,
+    "N_f": 7289,
+    "N_b": 764,
+    "N_aval": 87
+   },
+   {
+    "n": 25,
+    "N_f": 10331,
+    "N_b": 908,
+    "N_aval": 103
+   },
+   {
+    "n": 31,
+    "N_f": 15884,
+    "N_b": 1128,
+    "N_aval": 127
+   }
+  ]
+ },
+ "commit": "540f1a4b3c5fd3b71b41947001489e9ed9330266",
+ "alteracoes_nao_commitadas": false,
+ "versoes": {
+  "parallel_pinns": "0.2.0.dev0",
+  "python": "3.11.5",
+  "torch": "2.13.0+cu132",
+  "numpy": "2.4.6",
+  "scipy": "1.16.3"
+ },
+ "plataforma": {
+  "sistema": "Windows-10-10.0.19045-SP0",
+  "processador": "Intel64 Family 6 Model 63 Stepping 2, GenuineIntel",
+  "nucleos_logicos": 12,
+  "gpu": "NVIDIA GeForce GTX 1660"
+ },
+ "inicio": "2026-11-25T02:08:25-03:00",
+ "fim": "2026-11-25T19:42:59-03:00",
+ "arquivos": [
+  "tarefa_dispositivocuda_n11_problemaP2_semente0.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente1.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente2.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente3.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente4.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente5.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente6.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente7.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente8.json",
+  "tarefa_dispositivocuda_n11_problemaP2_semente9.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente0.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente1.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente2.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente3.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente4.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente5.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente6.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente7.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente8.json",
+  "tarefa_N_b544_N_f3719_dispositivocuda_n15_problemaP2_semente9.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente0.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente1.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente2.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente3.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente4.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente5.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente6.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente7.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente8.json",
+  "tarefa_N_aval87_N_b764_N_f7289_dispositivocuda_n21_problemaP2_semente9.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente0.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente1.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente2.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente3.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente4.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente5.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente6.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente7.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente8.json",
+  "tarefa_N_aval103_N_b908_N_f10331_dispositivocuda_n25_problemaP2_semente9.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente0.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente1.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente2.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente3.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente4.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente5.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente6.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente7.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente8.json",
+  "tarefa_N_aval127_N_b1128_N_f15884_dispositivocuda_n31_problemaP2_semente9.json"
+ ]
+}

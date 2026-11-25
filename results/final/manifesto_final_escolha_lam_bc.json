@@ -1,0 +1,57 @@
+{
+ "config": {
+  "nome": "final_escolha_lam_bc",
+  "pasta": "final",
+  "tipo": "tarefas",
+  "base": {
+   "problema": "P2",
+   "n": 11,
+   "dispositivo": "cpu",
+   "sem_plato": true
+  },
+  "grade": {
+   "lam_bc": [
+    0.1,
+    0.3,
+    1.0,
+    3.0
+   ],
+   "semente": [
+    10,
+    11,
+    12
+   ]
+  }
+ },
+ "commit": "540f1a4b3c5fd3b71b41947001489e9ed9330266",
+ "alteracoes_nao_commitadas": false,
+ "versoes": {
+  "parallel_pinns": "0.2.0.dev0",
+  "python": "3.11.5",
+  "torch": "2.13.0+cu132",
+  "numpy": "2.4.6",
+  "scipy": "1.16.3"
+ },
+ "plataforma": {
+  "sistema": "Windows-10-10.0.19045-SP0",
+  "processador": "Intel64 Family 6 Model 63 Stepping 2, GenuineIntel",
+  "nucleos_logicos": 12,
+  "gpu": "NVIDIA GeForce GTX 1660"
+ },
+ "inicio": "2026-11-25T02:08:24-03:00",
+ "fim": "2026-11-25T19:42:59-03:00",
+ "arquivos": [
+  "tarefa_dispositivocpu_lam_bc0p1_n11_problemaP2_semente10.json",
+  "tarefa_dispositivocpu_lam_bc0p1_n11_problemaP2_semente11.json",
+  "tarefa_dispositivocpu_lam_bc0p1_n11_problemaP2_semente12.json",
+  "tarefa_dispositivocpu_lam_bc0p3_n11_problemaP2_semente10.json",
+  "tarefa_dispositivocpu_lam_bc0p3_n11_problemaP2_semente11.json",
+  "tarefa_dispositivocpu_lam_bc0p3_n11_problemaP2_semente12.json",
+  "tarefa_dispositivocpu_n11_problemaP2_semente10.json",
+  "tarefa_dispositivocpu_n11_problemaP2_semente11.json",
+  "tarefa_dispositivocpu_n11_problemaP2_semente12.json",
+  "tarefa_dispositivocpu_lam_bc3p0_n11_problemaP2_semente10.json",
+  "tarefa_dispositivocpu_lam_bc3p0_n11_problemaP2_semente11.json",
+  "tarefa_dispositivocpu_lam_bc3p0_n11_problemaP2_semente12.json"
+ ]
+}

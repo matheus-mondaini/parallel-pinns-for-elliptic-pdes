@@ -1,0 +1,54 @@
+{
+ "config": {
+  "nome": "final_rq3_varredura_nf_fixo",
+  "pasta": "final",
+  "tipo": "tarefas",
+  "base": {
+   "problema": "P2",
+   "dispositivo": "cuda",
+   "sem_plato": true
+  },
+  "grade": {
+   "semente": [
+    0,
+    1,
+    2
+   ]
+  },
+  "variantes": [
+   {
+    "n": 21,
+    "N_aval": 87
+   },
+   {
+    "n": 31,
+    "N_aval": 127
+   }
+  ]
+ },
+ "commit": "540f1a4b3c5fd3b71b41947001489e9ed9330266",
+ "alteracoes_nao_commitadas": false,
+ "versoes": {
+  "parallel_pinns": "0.2.0.dev0",
+  "python": "3.11.5",
+  "torch": "2.13.0+cu132",
+  "numpy": "2.4.6",
+  "scipy": "1.16.3"
+ },
+ "plataforma": {
+  "sistema": "Windows-10-10.0.19045-SP0",
+  "processador": "Intel64 Family 6 Model 63 Stepping 2, GenuineIntel",
+  "nucleos_logicos": 12,
+  "gpu": "NVIDIA GeForce GTX 1660"
+ },
+ "inicio": "2026-11-25T02:08:26-03:00",
+ "fim": "2026-11-25T19:42:59-03:00",
+ "arquivos": [
+  "tarefa_N_aval87_dispositivocuda_n21_problemaP2_semente0.json",
+  "tarefa_N_aval87_dispositivocuda_n21_problemaP2_semente1.json",
+  "tarefa_N_aval87_dispositivocuda_n21_problemaP2_semente2.json",
+  "tarefa_N_aval127_dispositivocuda_n31_problemaP2_semente0.json",
+  "tarefa_N_aval127_dispositivocuda_n31_problemaP2_semente1.json",
+  "tarefa_N_aval127_dispositivocuda_n31_problemaP2_semente2.json"
+ ]
+}
