@@ -121,7 +121,11 @@ O DDP roda em CPU, com `gloo`. Igualdade bit a bit só é garantida na mesma pla
 
 ## Execução final
 
-`python -m parallel_pinns.cli.run_all "configs/final/*.yaml"` rodou as 570 execuções da [`configs/final/`](configs/README.md) em 25/11/2026 (01:29 às 19:42), no commit `540f1a4`, registrado em cada manifesto. Os resultados estão em `results/final/`, e as tabelas e figuras do TCC 2 saem de [`notebooks/02_resultados_finais.ipynb`](notebooks/02_resultados_finais.ipynb), que não treina nada. No texto, citar esse commit e a tag exploratória.
+`python -m parallel_pinns.cli.run_all "configs/final/*.yaml"` rodou as 570 execuções da [`configs/final/`](configs/README.md) em 25/11/2026 (01:29 às 19:42), no commit `540f1a4`, registrado em cada manifesto. Esse commit é a tag **`v0.2.0-execucao-final`**; em `main`, o mesmo conteúdo aparece como `978a6c8`, porque o merge por rebase reescreve os commits. Os resultados estão em `results/final/`, e as tabelas e figuras do TCC 2 saem de [`notebooks/02_resultados_finais.ipynb`](notebooks/02_resultados_finais.ipynb), que não treina nada. No texto, citar as duas tags: `v0.1.0-exploratorio` e `v0.2.0-execucao-final`.
+
+```
+git checkout v0.2.0-execucao-final
+```
 
 ## Diferenças em relação à proposta do TCC (§3.2, §3.3 e §3.6)
 
